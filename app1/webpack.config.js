@@ -40,6 +40,7 @@ module.exports = {
       remotes: {
         app2: `app2@${getRemoteEntryUrl(3002)}`,
       },
+      shared: { react: {singleton: true}}
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',

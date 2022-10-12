@@ -34,6 +34,7 @@ module.exports = {
       exposes: {
         './injectApp': './src/injectApp',
       },
+      shared: ['react']
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',

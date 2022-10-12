@@ -1,12 +1,17 @@
-import LocalButton from './Button';
 import React from 'react';
+import styled from 'styled-components';
 
 const App = () => (
-  <div style={{ border: '1px red solid' }}>
-    <h1>Remote Application - React Version {React.version}</h1>
-    <h2>App 2</h2>
-    <LocalButton />
-  </div>
+  <ChildAppContainer>
+    <h1>Child App</h1>
+    <h3>React Version {React.version}</h3>
+  </ChildAppContainer>
 );
+
+export const ChildAppContainer = styled.div`
+  width: calc(100vw - 250px);
+  border: solid 1px red;
+  height: 900px;
+`;
 
 export default App;
