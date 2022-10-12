@@ -11,7 +11,6 @@ const App = () => (
   <ChildAppContainer>
     <h1>Child App</h1>
     <h3>React Version {React.version}</h3>
-    <h3>Styled Components Version {styled.version}</h3>
   </ChildAppContainer>
 );
 

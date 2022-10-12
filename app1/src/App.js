@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import { Header } from './Header';
+import { NavBar } from './NavBar';
 
 const parentElementId = 'parent';
 
@@ -11,12 +13,11 @@ const App = () => {
   // App2 will be injected in the div with parentElementId
   return (
     <ContainerApp>
-      <Header>
-        <h1>Container Application</h1>
-        <h3>React Version {React.version}</h3>
-      </Header>
+      <Header />
       <FlexContainer>
-      <LeftNavPanel />
+      <LeftNavPanel>
+        <NavBar />
+      </LeftNavPanel>
       <ChildAppContainer>
         <div id={parentElementId}></div>
       </ChildAppContainer>
@@ -25,9 +26,7 @@ const App = () => {
   );
 };
 
-const Header = styled.div`
-  border-bottom: solid 2px blue;
-`;
+
 
 const ContainerApp = styled.div`
   border: solid 2px blue;
